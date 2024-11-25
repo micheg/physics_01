@@ -1,5 +1,6 @@
 import Phaser from "phaser";
 import GameScene from "./scenes/GameScene.js";
+import PlatformerScene from "./scenes/PlatScene.js";
 
 const config = {
   type: Phaser.AUTO,
@@ -9,6 +10,7 @@ const config = {
     autoCenter: Phaser.Scale.CENTER_BOTH,
     width: 1280,
     height: 720,
+    backgroundColor: 0x87CEEB, // Colore celeste in formato esadecimale
   },
   physics: {
     default: "arcade",
@@ -17,7 +19,7 @@ const config = {
       debug: true,
     },
   },
-  scene: [GameScene],
+  scene: [PlatformerScene],
 };
 
 const game = new Phaser.Game(config);
